@@ -14,6 +14,14 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="table-responsive">
+                            @if(Session::has('success_message'))
+                                        <div class="alert alert-success">
+                                            <strong>
+                                                Success | {{Session::get('success_message')}}
+                                            </strong>
+                                        </div>
+                                    @endif
+                                    @if(Cart::instance('cart')->count() >0)
                             <table class="table shopping-summery text-center clean">
                                 <thead>
                                     <tr class="main-heading">
@@ -26,15 +34,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if(Session::has('success_message'))
-                                        <div class="alert alert-success">
-                                            <strong>
-                                                Success | {{Session::get('success_message')}}
-                                            </strong>
-                                        </div>
-                                    @endif
-                                    @if(Cart::count() >0)
-                                    @foreach(Cart::content() as $item)
+                                    @foreach(Cart::instance('cart')->content() as $item)
                                     <tr>
                                         <td class="image product-thumbnail"><img src="{{asset('assets/imgs/shop/product-')}}{{$item->model->id}}-1.jpg" alt="#"></td>
                                         <td class="product-des product-name">

@@ -1,13 +1,13 @@
 <div class="header-action-icon-2">
     <a class="mini-cart-icon" href="{{route('shop.cart')}}">
         <img alt="Surfside Media" src="{{asset('assets/imgs/theme/icons/icon-cart.svg')}}">
-        @if(Cart::count() > 0)
+        @if(Cart::instance('cart')->count() > 0)
         <span class="pro-count blue">{{Cart::count()}}</span>
         @endif
     </a>
     <div class="cart-dropdown-wrap cart-dropdown-hm2">
         <ul>
-            @foreach(Cart::content() as $item)
+            @foreach(Cart::instance('cart')->content() as $item)
             <li>
                 <div class="shopping-cart-img">
                     <a href="{{route('product.details', ['slug'=>$item->model->slug])}}"><img alt="{{$item->model->name}}" src="{{asset('assets/imgs/shop/product-')}}{{$item->model->id}}-1.jpg"></a>

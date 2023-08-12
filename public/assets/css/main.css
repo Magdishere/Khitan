@@ -7,6 +7,8 @@
 @import url(plugins/select2.min.css);
 @import url(plugins/slick.css);
 @import url(plugins/perfect-scrollbar.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Titillium+Web:wght@600&display=swap');
+
 /*RESET*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -596,7 +598,7 @@ h4 {
 /*TYPOGRAPHY*/
 body {
   color: #4f5d77;
-  font-family: "Lato", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-style: normal;
@@ -609,7 +611,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #222222;
   font-weight: 600;
   line-height: 1.2;
@@ -936,7 +938,7 @@ button.submit:hover, button[type='submit']:hover {
   border: 0;
   padding: 14px 80px 14px 65px;
   background-repeat: no-repeat;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn.btn-brush i, .button.btn-brush i {
@@ -2140,7 +2142,7 @@ label {
   border-right-color: currentcolor;
   border-bottom-color: currentcolor;
   border-left-color: currentcolor;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1;
 }
@@ -2229,7 +2231,7 @@ label {
 }
 
 .tab-header .view-more {
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
   display: -webkit-box;
@@ -5728,7 +5730,7 @@ h6.post-title {
   line-height: 1;
   padding: 10px 20px;
   background-color: hsl(330, 80%, 61%);
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border: 2px solid hsl(330, 80%, 61%);
 }
 
@@ -7299,7 +7301,7 @@ span.fi-rs-apps {
   color: hsl(330, 80%, 61%);
   position: relative;
   font-size: 13px;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .categori-dropdown-wrap .more_categories::before {
@@ -7556,7 +7558,7 @@ span.fi-rs-apps {
   border: 0;
   font-size: 14px;
   padding: 0 30px;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .download-app {
@@ -9889,8 +9891,8 @@ span.fi-rs-apps {
 .zoomWindow{ z-index: 9999;}
 
 .logo.logo-width-1 a img {
-	width: 220px;
-	min-width: 220px;
+	width: 100px;
+	min-width: 100px;
 }
 
 .header-style-1 .header-top-ptb-1 {
