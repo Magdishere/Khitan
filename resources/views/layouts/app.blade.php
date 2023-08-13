@@ -12,6 +12,8 @@
 <meta property="og:url" content="">
 <meta property="og:image" content="">
 <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/theme/favicon.ico')}}">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 @livewireStyles
@@ -337,14 +339,14 @@
                                     </li>
                                     <li><a href="blog.html">Blog </a></li>
                                     <li><a href="contact.html">Contact</a></li>
+                                    @auth
                                     <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
 
-                                        @auth
                                             @if(Auth::user()->utype == 'ADM')
                                                 <ul class="sub-menu">
                                                     <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                                                     <li><a href="#">Products</a></li>
-                                                    <li><a href="#">Categories</a></li>
+                                                    <li><a href="{{route('admin.categories')}}">Categories</a></li>
                                                     <li><a href="#">Coupons</a></li>
                                                     <li><a href="#">Orders</a></li>
                                                     <li><a href="#">Customers</a></li>
@@ -354,8 +356,9 @@
                                                     <li><a href="{{route('user.dashboard')}}">Dashboard</a></li>
                                                 </ul>
                                             @endif
-                                        @endif
+
                                     </li>
+                                    @endif
                                 </ul>
                             </nav>
                         </div>
