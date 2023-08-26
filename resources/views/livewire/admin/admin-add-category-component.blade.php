@@ -44,6 +44,26 @@
                                             <p class="text-danger">{{$message}}</p>
                                         @enderror
                                     </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="image" class="form-label">Image</label>
+                                        <input type="file" class="form-control" wire:modal="image"/>
+                                        @error('image')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
+                                        @if($image)
+                                            <img src="{{$image->temporaryUrl()}}" width="120"/>
+                                        @endif
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="is_popular" class="form-label">Popular</label>
+                                        <select class="form-control" name="is_popular" wire:modal="is_popular">
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                        @error('slug')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
+                                    </div>
                                     <button type="submit" class="btn submit-btn float-end"><i class="fa fa-plus"></i> Add Category</button>
                                 </form>
                             </div>

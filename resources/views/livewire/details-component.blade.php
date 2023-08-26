@@ -21,25 +21,7 @@
                                         <!-- MAIN SLIDES -->
                                         <div class="product-image-slider">
                                             <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-1.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-3.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-4.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-5.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-6.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-7.jpg')}}" alt="product image">
+                                                <img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="product image">
                                             </figure>
                                         </div>
                                         <!-- THUMBNAILS -->
@@ -69,7 +51,7 @@
                                         <h2 class="title-detail">{{$product->name}}</h2>
                                         <div class="product-detail-rating">
                                             <div class="pro-details-brand">
-                                                <span> Brands: <a href="shop.html">Bootstrap</a></span>
+                                                <span> Brands: <a href="shop.html">Khitan</a></span>
                                             </div>
                                             <div class="product-rate-cover text-end">
                                                 <div class="product-rate d-inline-block">
@@ -133,9 +115,9 @@
                                             </div>
                                         </div>
                                         <ul class="product-meta font-xs color-grey mt-50">
-                                            <li class="mb-5">SKU: <a href="#">FWM15VKT</a></li>
+                                            <li class="mb-5">SKU: {{$product->sku}}</li>
                                             <li class="mb-5">Tags: <a href="#" rel="tag">Cloth</a>, <a href="#" rel="tag">Women</a>, <a href="#" rel="tag">Dress</a> </li>
-                                            <li>Availability:<span class="in-stock text-success ml-5">8 Items In Stock</span></li>
+                                            <li>Availability:<span class="in-stock text-success ml-5">{{$product->quantity}} Items In Stock</span></li>
                                         </ul>
                                     </div>
                                     <!-- Detail Info -->
@@ -438,7 +420,7 @@
                                                     <div class="product-img product-img-zoom">
                                                         <a href="{{route('product.details', ['slug' => $product->slug])}}" tabindex="0">
                                                             <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$rproduct->id}}-1.jpg" alt="{{$rproduct->name}}">
-                                                            <img class="hover-img" src="{{asset('assets/imgs/shop/product-2-2.jpg')}}" alt="">
+
                                                         </a>
                                                     </div>
                                                     <div class="product-action-1">
@@ -535,11 +517,11 @@
                             @foreach($nproducts as $nproduct)
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/product-')}}{{$nproduct->id}}-2.jpg" alt="{{$nproduct->name}}">
+                                    <img src="{{asset('assets/imgs/products')}}/{{$nproduct->image}}" alt="{{$nproduct->name}}">
                                 </div>
                                 <div class="content pt-10">
                                     <h5><a href="{{route('product.details', ['slug' => $nproduct->slug])}}">{{$nproduct->name}}</a></h5>
-                                    <p class="price mb-0 mt-5">{{$nproduct->regular_price}}</p>
+                                    <p class="price mb-0 mt-5">${{$nproduct->regular_price}}</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:90%"></div>
                                     </div>

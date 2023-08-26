@@ -291,7 +291,7 @@ input[type=number]:focus,
 }
 
 .bg-brand {
-  background-color: #F15412 !important;
+  background-color: hsl(330, 60%, 48%) !important;
 }
 
 .bg-primary {
@@ -856,11 +856,11 @@ button.submit, button[type='submit'] {
 }
 
 button.submit:hover, button[type='submit']:hover {
-  background-color: #F15412 !important;
+  background-color: hsl(330, 60%, 48%) !important;
 }
 
 .btn-brand:hover {
-  background-color: #F15412 !important;
+  background-color: hsl(330, 60%, 48%) !important;
 }
 
 .btn-login {
@@ -1198,7 +1198,7 @@ textarea:focus {
 }
 
 .contact-from-area .contact-form-style button:hover {
-  background-color: #F15412 !important;
+  background-color: hsl(330, 60%, 48%) !important;
 }
 
 .form-group {
